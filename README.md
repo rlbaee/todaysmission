@@ -1,4 +1,4 @@
-# Today's Mission | My edition
+# Today's Mission
 
 ## Features
 - [ ] Gives you a random mission to do
