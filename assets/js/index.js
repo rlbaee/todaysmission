@@ -1,7 +1,16 @@
-fetch("/assets/json/missions.json")
-  .then((response) => response.json())
-  .then((missions) => {
-    const randomMission = missions[Math.floor(Math.random() * missions.length)];
+const mission = document.getElementById("mission");
+const button = document.getElementById("generate-mission");
 
-    document.getElementById("mission").textContent = randomMission.mission;
-  });
+button.onclick = function () {
+  console.log("clicked");
+  fetch("/assets/json/missions.json")
+    .then((response) => response.json())
+    .then((missions) => {
+      const randomMission =
+        missions[Math.floor(Math.random() * missions.length)];
+      return randomMission;
+    })
+    .then((randomMission) => {
+      mission.textContent = randomMission.mission;
+    });
+};
