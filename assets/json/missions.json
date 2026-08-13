@@ -1702,5 +1702,9 @@
   {
     "id": "426",
     "mission": "Grab items aggressively while saying \"yoink\" in the calmest voice possible."
+  },
+  {
+    "id": "427",
+    "mission": "Say bless you when no one sneezed"
   }
 ]
