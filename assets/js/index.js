@@ -3,7 +3,7 @@ const button = document.getElementById("generate-mission");
 
 button.onclick = function () {
   console.log("clicked");
-  fetch("assets/json/missions.json")
+  fetch("../json/missions.json")
     .then((response) => response.json())
     .then((missions) => {
       const randomMission =
