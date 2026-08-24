@@ -989,7 +989,7 @@
   },
   {
     "id": "248",
-    "mission": "Go to a sperm bank with a milk mustache and ask if you can make a withdrawal"
+    "mission": "During conversation, say \"I have a confession to make\" and then say something completely mundane"
   },
   {
     "id": "249",
@@ -1702,5 +1702,9 @@
   {
     "id": "426",
     "mission": "Grab items aggressively while saying \"yoink\" in the calmest voice possible."
+  },
+  {
+    "id": "427",
+    "mission": "Say bless you when no one sneezed"
   }
 ]
