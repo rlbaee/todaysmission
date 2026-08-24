@@ -1,7 +1,7 @@
 # Today's Mission
 
 ## Features
-- [ ] Gives you a random mission to do
+- [x] Gives you a random mission to do
 - [ ] Gives you a random mission for today only and restarts at midnight
 - [ ] Saves progress in a database
 - [ ] Auth
