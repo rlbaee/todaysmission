@@ -2,15 +2,19 @@ const mission = document.getElementById("mission");
 const button = document.getElementById("generate-mission");
 
 button.onclick = function () {
-  console.log("clicked");
-  fetch("assets/json/missions.json")
-    .then((response) => response.json())
-    .then((missions) => {
-      const randomMission =
-        missions[Math.floor(Math.random() * missions.length)];
-      return randomMission;
+  fetch("/api/mission")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Unable to load a mission");
+      }
+
+      return response.json();
     })
-    .then((randomMission) => {
-      mission.textContent = randomMission.mission;
+    .then((selectedMission) => {
+      mission.textContent = selectedMission.mission;
+    })
+    .catch((error) => {
+      console.error(error);
+      mission.textContent = "Unable to load a mission. Please try again.";
     });
 };
