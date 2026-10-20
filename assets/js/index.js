@@ -1,8 +1,8 @@
 const mission = document.getElementById("mission");
-const button = document.getElementById("generate-mission");
+const missionCard = document.getElementById("mission-card");
 const changelog = document.getElementById("changelog");
 const changelogClose = document.getElementById("changelog-close");
-const appVersion = "1.1.2";
+const appVersion = "1.2.0";
 const seenVersionKey = "todays-mission-seen-version";
 
 if (localStorage.getItem(seenVersionKey) !== appVersion) {
@@ -14,10 +14,8 @@ changelogClose.onclick = function () {
   changelog.hidden = true;
 };
 
-button.onclick = async function () {
-  button.disabled = true;
-  button.querySelector("span").textContent = "Finding a mission...";
-
+async function loadMission() {
+  missionCard.classList.add("is-loading");
   try {
     const response = await fetch("/api/mission");
 
@@ -30,8 +28,16 @@ button.onclick = async function () {
   } catch (error) {
     console.error(error);
     mission.textContent = "Unable to load a mission. Please try again.";
-  } finally {
-    button.disabled = false;
-    button.querySelector("span").textContent = "New mission";
   }
-};
+  missionCard.classList.remove("is-loading");
+}
+
+missionCard.addEventListener("click", loadMission);
+missionCard.addEventListener("keydown", function (event) {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    loadMission();
+  }
+});
+
+loadMission();

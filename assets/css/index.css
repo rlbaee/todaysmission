@@ -88,15 +88,36 @@ body {
 }
 
 .content-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) max-content;
-  align-items: start;
-  gap: clamp(16px, 4vw, 34px);
+  display: block;
 }
 
 .mission-content {
-  min-width: 0;
+  min-height: 190px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
   max-width: none;
+  background: rgba(255, 255, 255, 0.035);
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    opacity 160ms ease;
+}
+
+.mission-content:hover {
+  border-color: rgba(178, 168, 255, 0.42);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.mission-content:focus-visible {
+  outline: 2px solid rgba(178, 168, 255, 0.8);
+  outline-offset: 4px;
+}
+
+.mission-content.is-loading {
+  cursor: wait;
+  opacity: 0.65;
 }
 
 .eyebrow {
@@ -116,65 +137,6 @@ h1 {
   font-weight: 500;
   letter-spacing: -0.035em;
   line-height: 1.12;
-}
-
-.action-area {
-  padding-top: 32px;
-}
-
-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 158px;
-  min-height: 50px;
-  padding: 0 14px 0 18px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 11px;
-  color: #101218;
-  background: #e8eaee;
-  font: inherit;
-  font-size: 0.85rem;
-  font-weight: 650;
-  white-space: nowrap;
-  cursor: pointer;
-  transition:
-    background 160ms ease,
-    box-shadow 160ms ease,
-    transform 160ms ease;
-}
-
-button:hover {
-  background: #fff;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
-  transform: translateY(-1px);
-}
-
-button:focus-visible {
-  outline: 2px solid rgba(178, 168, 255, 0.8);
-  outline-offset: 3px;
-}
-
-button:active {
-  transform: translateY(0);
-}
-
-button:disabled {
-  cursor: wait;
-  opacity: 0.65;
-}
-
-.button-arrow {
-  display: grid;
-  flex: 0 0 27px;
-  width: 27px;
-  height: 27px;
-  place-items: center;
-  border-radius: 7px;
-  color: #f4f5f7;
-  background: #171a22;
-  font-size: 1rem;
 }
 
 .changelog {
@@ -223,12 +185,19 @@ button:disabled {
 }
 
 .changelog-close {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #101218;
+  background: #e8eaee;
   width: auto;
   min-width: 62px;
   min-height: 34px;
   padding: 0 12px;
+  font: inherit;
   font-size: 0.72rem;
+  font-weight: 650;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 @media (max-width: 520px) {
@@ -239,6 +208,11 @@ button:disabled {
   .container {
     min-height: 500px;
     border-radius: 16px;
+  }
+
+  .mission-content {
+    min-height: 220px;
+    padding: 20px;
   }
 
   .action-area {

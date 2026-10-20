@@ -17,26 +17,26 @@
       </div>
 
       <div class="content-row">
-        <section class="mission-content" aria-live="polite">
+        <section
+          class="mission-content"
+          id="mission-card"
+          role="button"
+          tabindex="0"
+          aria-label="Get a new mission"
+          aria-live="polite"
+        >
           <p class="eyebrow">Mission</p>
           <h1 id="mission">
-            When meeting new people, tell each one another name.
+            Loading mission...
           </h1>
         </section>
-
-        <div class="action-area">
-          <button id="generate-mission" type="button">
-            <span>New mission</span>
-            <span class="button-arrow" aria-hidden="true">↗</span>
-          </button>
-        </div>
       </div>
     </main>
 
     <footer class="site-footer">
       <span>Today's Mission</span>
       <span aria-hidden="true">·</span>
-      <span>v1.1.2</span>
+      <span>v1.2.0</span>
     </footer>
 
     <aside
@@ -47,8 +47,8 @@
     >
       <div>
         <p class="changelog-label">What's new</p>
-        <h2 id="changelog-title">Button spacing fixed</h2>
-        <p>The new mission label and icon now have room to breathe.</p>
+        <h2 id="changelog-title">Click the mission for a new one</h2>
+        <p>The extra button is gone. Click or tap the mission card to refresh it.</p>
       </div>
       <button class="changelog-close" id="changelog-close" type="button">
         Got it
