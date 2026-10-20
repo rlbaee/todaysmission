@@ -74,6 +74,13 @@ body {
   letter-spacing: 0;
 }
 
+.content-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 138px;
+  align-items: start;
+  gap: 34px;
+}
+
 .mission-content {
   min-height: 190px;
   max-width: 520px;
@@ -99,16 +106,14 @@ h1 {
 }
 
 .action-area {
-  margin-top: auto;
-  padding-top: 22px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 32px;
 }
 
 button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 138px;
   min-height: 50px;
   padding: 0 14px 0 18px;
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -166,8 +171,21 @@ button:disabled {
     border-radius: 16px;
   }
 
+  .content-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
   .mission-content {
     min-height: 220px;
+  }
+
+  .action-area {
+    padding-top: 0;
+  }
+
+  button {
+    width: 100%;
   }
 }
 
