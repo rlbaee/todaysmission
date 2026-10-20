@@ -19,6 +19,6 @@ button.onclick = async function () {
     mission.textContent = "Unable to load a mission. Please try again.";
   } finally {
     button.disabled = false;
-    button.querySelector("span").textContent = "Give me a mission";
+    button.querySelector("span").textContent = "New mission";
   }
 };
