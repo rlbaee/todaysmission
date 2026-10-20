@@ -2,7 +2,7 @@ const mission = document.getElementById("mission");
 const missionCard = document.getElementById("mission-card");
 const changelog = document.getElementById("changelog");
 const changelogClose = document.getElementById("changelog-close");
-const appVersion = "1.3.0";
+const appVersion = "1.3.1";
 const seenVersionKey = "todays-mission-seen-version";
 
 if (localStorage.getItem(seenVersionKey) !== appVersion) {

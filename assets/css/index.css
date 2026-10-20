@@ -152,6 +152,14 @@ body::after {
   opacity: 0.65;
 }
 
+.mission-hint {
+  margin: 12px 4px 0;
+  color: rgba(241, 243, 245, 0.42);
+  font-size: 0.7rem;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
 .eyebrow {
   margin: 0 0 14px;
   color: #9e94e8;
