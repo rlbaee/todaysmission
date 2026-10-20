@@ -2,7 +2,7 @@ const mission = document.getElementById("mission");
 const button = document.getElementById("generate-mission");
 const changelog = document.getElementById("changelog");
 const changelogClose = document.getElementById("changelog-close");
-const appVersion = "1.1.1";
+const appVersion = "1.1.2";
 const seenVersionKey = "todays-mission-seen-version";
 
 if (localStorage.getItem(seenVersionKey) !== appVersion) {
