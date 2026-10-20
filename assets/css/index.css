@@ -75,11 +75,8 @@ body {
 }
 
 .mission-content {
-  height: 190px;
-  overflow-y: auto;
+  min-height: 190px;
   max-width: 520px;
-  padding-right: 8px;
-  scrollbar-width: thin;
 }
 
 .eyebrow {
@@ -170,7 +167,7 @@ button:disabled {
   }
 
   .mission-content {
-    height: 220px;
+    min-height: 220px;
   }
 }
 
