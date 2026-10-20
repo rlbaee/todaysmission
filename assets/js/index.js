@@ -1,5 +1,18 @@
 const mission = document.getElementById("mission");
 const button = document.getElementById("generate-mission");
+const changelog = document.getElementById("changelog");
+const changelogClose = document.getElementById("changelog-close");
+const appVersion = "1.1.0";
+const seenVersionKey = "todays-mission-seen-version";
+
+if (localStorage.getItem(seenVersionKey) !== appVersion) {
+  changelog.hidden = false;
+  localStorage.setItem(seenVersionKey, appVersion);
+}
+
+changelogClose.onclick = function () {
+  changelog.hidden = true;
+};
 
 button.onclick = async function () {
   button.disabled = true;
