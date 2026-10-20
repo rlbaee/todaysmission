@@ -12,8 +12,11 @@
   <body>
     <main class="container">
       <div class="brand">
-        <span class="brand-mark" aria-hidden="true">TM</span>
-        <span>Today's Mission</span>
+        <div>
+          <span class="brand-mark" aria-hidden="true">TM</span>
+          <span>Today's Mission</span>
+          <p class="mission-hint">Click the card to get a new mission</p>
+        </div>
       </div>
 
       <div class="content-row">
@@ -30,14 +33,13 @@
             Loading mission...
           </h1>
         </section>
-        <p class="mission-hint">Click the card to get a new mission</p>
       </div>
     </main>
 
     <footer class="site-footer">
       <span>Today's Mission</span>
       <span aria-hidden="true">·</span>
-      <span>v1.3.2</span>
+      <span>v1.3.3</span>
     </footer>
 
     <aside
@@ -48,8 +50,8 @@
     >
       <div>
         <p class="changelog-label">What's new</p>
-        <h2 id="changelog-title">A softer typeface</h2>
-        <p>The mission now uses a cleaner, more polished display font.</p>
+        <h2 id="changelog-title">Hint moved to the header</h2>
+        <p>The click instruction stays in place while the mission changes.</p>
       </div>
       <button class="changelog-close" id="changelog-close" type="button">
         Got it
